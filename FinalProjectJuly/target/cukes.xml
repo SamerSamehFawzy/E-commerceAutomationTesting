@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="177.45">
+<testcase classname="Register | users could register with new accounts" name="guest user could register with valid data successfully" time="21.165">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "Samer" and last name "Sameh".....................passed
+And user enter date of birth................................................passed
+And user enter email "tester12@example.com".................................passed
+And user enter company Name.................................................passed
+And user enter password and confirm password................................passed
+And user click on register button...........................................passed
+Then user will be directed to registration page with message "Your registration completed".passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="10.749">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user enter email "tester@example.com" and password "123456789".........passed
+And user click on log in button.............................................passed
+Then user will be logged in successfully....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | user could switch between different currencies" name="user could move between currencies" time="10.783">
+<system-out><![CDATA[When user select random currency............................................passed
+And currency is changed correctly...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users will be able to search for products with different parameters" name="user could search using product name" time="12.416">
+<system-out><![CDATA[Given user click on search field............................................passed
+When user search with product name "apple" and press enter..................passed
+Then user could find valid results..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | users will be able to search for products with different parameters" name="user could search using sku" time="11.175">
+<system-out><![CDATA[Given user click on search field............................................passed
+When user search with SKU "AP_MBP_13" and press enter.......................passed
+Then user could find valid results..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_hoverCategories | user could hover categories and select sub category" name="user could hover categories" time="14.022">
+<system-out><![CDATA[When user hover category and select subcategory.............................passed
+Then user will directed successfully to subcategory page....................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="user could open first slider" time="11.088">
+<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When user click on first slider.............................................passed
+Then relative product for first slider is displayed.........................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at org.example.stepDefinitions.D06_homeSliderStepDef.first_product_details_opened(D06_homeSliderStepDef.java:29)
+	at ✽.relative product for first slider is displayed(file:///C:/Users/samer.sameh/Desktop/FinalProjectJuly/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="user could open second slider" time="19.224">
+<failure message="element not interactable&#10;  (Session info: chrome=104.0.5112.102)&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'SSAMEH-LT-9987', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3b3c1bfceb283d8f80dce8612b50297c, clickElement {id=419597bb-dd8b-42f2-9c85-340fe9574ea2}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SAMER~1.SAM\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53230}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53230/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (3b3c1bfceb283d8f80dce8612b50297c)] -&gt; css selector: a[class=&quot;nivo-imageLink&quot;]:nth-child(2)]&#10;Session ID: 3b3c1bfceb283d8f80dce8612b50297c" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[When user click on second slider............................................failed
+Then relative product for second slider is displayed........................skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=104.0.5112.102)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'SSAMEH-LT-9987', ip: '192.168.0.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_331'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3b3c1bfceb283d8f80dce8612b50297c, clickElement {id=419597bb-dd8b-42f2-9c85-340fe9574ea2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SAMER~1.SAM\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53230}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53230/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (3b3c1bfceb283d8f80dce8612b50297c)] -> css selector: a[class="nivo-imageLink"]:nth-child(2)]
+Session ID: 3b3c1bfceb283d8f80dce8612b50297c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.stepDefinitions.D06_homeSliderStepDef.secondSlider(D06_homeSliderStepDef.java:34)
+	at ✽.user click on second slider(file:///C:/Users/samer.sameh/Desktop/FinalProjectJuly/src/main/resources/features/F06_homeSliders.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="12.017">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="12.931">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="12.574">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens rss link....................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefinitions.D07_followUsStepDef.open_link(D07_followUsStepDef.java:43)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened in new tab(file:///C:/Users/samer.sameh/Desktop/FinalProjectJuly/src/main/resources/features/F07_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="16.875">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_wishList | guest user could add products to wishlist" name="guest user could add products to wishlist successfully" time="11.718">
+<system-out><![CDATA[When guest user click on wishlist button for any product....................passed
+Then product will be added to wishlist page.................................passed
+]]></system-out>
+</testcase>
+</testsuite>
